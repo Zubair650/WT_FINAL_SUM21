@@ -1,4 +1,5 @@
 <?php
+session_start();
 $username = "";
 $err_username = "";
 $password = "";
@@ -32,8 +33,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		foreach($users as $u=>$p)
 		{
-			if($users == $u && $password == $p)
+			if($username == $u && $password == $p)
 			{
+				//$_SESSION["loggeduser"] = $username;
 				setcookie("loggeduser",$username,time()+120);
 				header("Location: Dashboard.php");
 			}
@@ -44,3 +46,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 }
 		
 ?>
+
+<html>
+<body>
+<form action="" method="post">
+<table>
+<tr>
+	<td>UserName</td>
+	<td>: <input name="username" value = "<?php echo $username;?>" type="text">
+	<span><?php echo $err_username; ?></span></td>
+	</tr>
+	<tr>
+	<td>Password</td>
+	<td>: <input name="password" value = "<?php echo $password;?>" type="password">
+	<span><?php echo $err_password; ?></span></td>
+	</tr><tr><td></td>
+	<td> <input type="submit" value="submit" > </td> </tr>
+</table>
+</form>
+</body>
+
+</html>
