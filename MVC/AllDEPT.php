@@ -10,7 +10,7 @@ foreach($d1 as $c)
 	echo "<tr>";
 	echo "<td>$i. </td>";
 	echo "<td>".$c["Name"]."</td>";
-	echo '<td><a href= "editcat.php?id='.$id.'"> Edit </a></td>';
+	echo '<td><a href= "editcat.php?ID='.$ID.'"> Edit </a></td>';
 	echo "</tr>";
 	echo "</table>";
 	$i++;

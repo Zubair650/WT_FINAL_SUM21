@@ -6,7 +6,7 @@ require_once "databaseConfig.php";
 $err_db ="";
 if(isset($_POST["add_dept"]))
 {
-	$rs = insertdept($_POST["name"]);
+	$rs = insertdept($_POST["Name"]);
 	if($rs === true)
 	{
 		header("Location: AllDEPT.php");
@@ -15,7 +15,7 @@ if(isset($_POST["add_dept"]))
 }
 elseif(isset($_POST["edit_dept"]))
 {
-	$rs = updatedept($_POST["name"],$_POST["id"]);
+	$rs = updatedept($_POST["Name"],$_POST["ID"]);
 	if($rs === true)
 	{
 		header("Location: AllDEPT.php");
@@ -23,9 +23,9 @@ elseif(isset($_POST["edit_dept"]))
 	$err_db = $rs;
 }
 
-function insertdept($name)
+function insertdept($Name)
 {
-	$query = "insert into  department values ('$name',NULL)";
+	$query = "insert into  department values ('$Name',NULL)";
 	return execute($query);
 }
 function getalldept()
@@ -34,15 +34,15 @@ function getalldept()
 	$rs = get($query);
 	return $rs;
 }
-function getdept($id)
+function getdept($ID)
 {
-	$query = "select * from department where ID = $id";
+	$query = "select * from department where ID = $ID";
 	$rs = get($query);
 	return $rs[0];
 }
-function updatedept($name,$id)
+function updatedept($Name,$ID)
 {
-	$query = "update department set Name= '$name' where ID = $id";
+	$query = "update department set Name= '$Name' where ID = $ID";
 	return execute($query);
 }
 ?>

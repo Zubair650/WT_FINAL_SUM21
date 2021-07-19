@@ -11,8 +11,8 @@ $dept = getalldept();
 <form action="" method="post" enctype= "multipart/form-data">
 <p>ADD Departements:</p>
 <span><?php echo $err_db; ?></span>
-<p>Name:<input type="text" name = "name"> </p>
-<p>ID:<input type="text" name = "id"> </p>
+<p>Name:<input type="text" name = "Name"> </p>
+<p>ID:<input type="text" name = "ID"> </p>
 
 <p><input type="submit" name ="add_dept" value="Add" > </p>
 </body>
