@@ -1,9 +1,9 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-include 'Controller/Temp.php';
+require_once 'Controller/Temp.php';
 ?>
 <?php
-include 'main_header.php';
+require_once 'main_header.php';
 ?>
 <html>
 <body>

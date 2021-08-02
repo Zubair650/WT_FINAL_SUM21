@@ -1,6 +1,6 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-include 'Models/db_config.php';
+require_once 'Models/db_config.php';
 $name = "";
 $err_name = "";
 $username = "";

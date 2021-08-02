@@ -1,5 +1,5 @@
 <?php 
-include 'Controller/CategoryController.php';
+require_once 'Controller/CategoryController.php';
 $id = $_GET["id"];
 $c = getCategory($id);
 ?>

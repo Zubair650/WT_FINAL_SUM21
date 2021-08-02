@@ -1,10 +1,10 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-include 'main_header.php';
+require_once 'main_header.php';
 ?>
 
 <?php
-include 'Models/db_config.php';
+require_once 'Models/db_config.php';
 $err_db ="";
 if(isset($_POST["add_cat"]))
 {

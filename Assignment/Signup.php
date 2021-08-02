@@ -1,10 +1,10 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-include 'main_header.php';
+require_once 'main_header.php';
 ?>
 
 <?php
-include 'Controller/Temp.php';
+require_once 'Controller/Temp.php';
 
 ?>
 
