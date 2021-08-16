@@ -20,6 +20,10 @@ require_once 'CommonHeader.php';
 			<td align="center"><a href ="Room_Booking.php"><input type="button" value="Book"> </a></td>
 		</tr>
 		<tr>
+			<td align="center">All Rooms</td>
+			<td align="center"><a href ="Rooms.php"><input type="button" value="Show"> </a></td>
+		</tr>
+		<tr>
 			<td align="center">Show All Booking Rooms</td>
 			<td align="center"><a href ="AllBookingRooms.php"><input type="button" value="Show"> </a></td>
 		</tr>

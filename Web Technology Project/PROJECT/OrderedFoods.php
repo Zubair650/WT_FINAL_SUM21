@@ -5,6 +5,7 @@
 ?><?php
 error_reporting (E_ALL ^ E_NOTICE);
 error_reporting (0);
+require_once 'main_header.php';
 require_once "Models/db_config.php";
 //require_once 'Classic.php';
 //require_once 'CustomerCheeckin.php';

@@ -123,6 +123,10 @@
 		
 		if ($rs === true)
 		{
+		$rs = deleteAvailable($_POST["RoomNo"]);
+	
+		if($rs === true)
+		{
 		$rs = inseertBooking($RoomNo);
 		
 		if ($rs === true)
@@ -130,6 +134,7 @@
 			header("Location: AllBookingRooms.php");
 		}
 		$err_db = $rs;	
+		}
 		}
 		
 		}
@@ -286,7 +291,13 @@
 		}
 		return false;
 	}
+	function deleteAvailable($RoomNo)
+	{
 	
+	$query = "DELETE FROM available_rooms WHERE room_no=$RoomNo";
+	//echo "$query";
+	return execute($query);
+	}
 	function inseertBooking($RoomNo)
 	{
 	$query = "insert into booked_rooms values (NULL,'$RoomNo')";

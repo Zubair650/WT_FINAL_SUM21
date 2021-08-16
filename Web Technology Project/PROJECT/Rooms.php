@@ -1,5 +1,5 @@
 <?php
-if(!isset($_COOKIE["loggeduser"]) && !isset($_COOKIE["loggeduser1"]) ){
+if(!isset($_COOKIE["loggeduser"]) && !isset($_COOKIE["loggeduser1"]) && !isset($_COOKIE["loggeduser2"])){
 header("Location: Login.php");
 }
 ?>
